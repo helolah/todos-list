@@ -37,7 +37,7 @@ export default class Form extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <input value={this.state.newListItem} onChange={this.handleTextChange}></input>
-                    <button type='submit'>ADICIONAR</button>
+                    <button type='submit'>+</button>
                 </form>
 
                 { this.state.listItems.map((item, index) => {
