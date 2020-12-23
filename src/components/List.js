@@ -1,5 +1,6 @@
 import React from 'react';
-import index from '../css/index.css';
+
+import { Item } from './styles';
 
 export default class List extends React.Component {
     constructor(props) {
@@ -16,8 +17,7 @@ export default class List extends React.Component {
         return (
             <div>
                 <ul>
-                    <li>{this.props.text}</li>
-                    <button type='button' onClick={this.handleScratch}>Feito</button>
+                    <Item>{this.props.text}</Item>
                 </ul>
             </div>
         );

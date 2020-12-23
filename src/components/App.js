@@ -1,14 +1,15 @@
 import React from 'react';
 import Form from './Form';
 
+import { Div, Title } from './styles';
+
 export default class App extends React.Component {
     render() {
         return (
-            <div>
-                <h1>Lista de Tarefas</h1>
-                <h4>O que eu preciso fazer hoje?</h4>
-                <Form title="Teste"/>
-            </div>
+            <Div>
+                <Title>O QUE EU PRECISO FAZER HOJE?</Title>
+                <Form title="Teste" />
+            </Div>
         );
     }
 }
