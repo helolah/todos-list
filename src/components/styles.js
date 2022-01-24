@@ -95,6 +95,11 @@ export const FormContent = styled.form`
         background: #2395FF;
         cursor: pointer;
         opacity: 1;
+        text-align: center;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
             opacity: 0.9;
@@ -107,20 +112,46 @@ export const FormContent = styled.form`
         }
     }
 `;
-export const ListItens = styled.ul`
-    max-width: 830px;
+
+export const ListItens = styled.div`
+    max-width: 780px;
     width: 100%;
     margin: 0 auto;
-`;
+    
+    .listItens {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(255,255,255);
+        border-radius: 0.2rem;
+        margin: 2rem;
 
-export const Item = styled.li`
-    background: #f1f1f1;
-    margin: 2rem;
-    padding: 1rem 1.5rem;
-    border-radius: 0.2rem;
-    text-align: left;
-    color: #2395FF;
-    font-size: 1rem;
-    font-weight: 500;
-    overflow: hidden;
+        input {
+            max-width: 600px;
+            width: 100%;
+            color: #2395FF;
+            font-family: 'Poppins',sans-serif;
+            font-size: 1rem;
+            padding: 1rem 1.5rem;
+            border: none;
+            background-color: rgb(255,255,255);
+            cursor: default;
+        
+            &:focus {
+                box-shadow: 0 0 0 0;
+                border: 0 none;
+                outline: 0;
+            }
+        }
+
+        .removeButton {
+            float:right;
+            background: red;
+            border:none;
+            padding: 1.25rem;
+            border-top-right-radius: 0.2rem;
+            border-bottom-right-radius: 0.2rem;
+            cursor: pointer;
+        }
+    }
 `;

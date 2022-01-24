@@ -1,5 +1,6 @@
 import React from 'react';
-import List from './List'
+import List from './List';
+import { FaPlus } from "react-icons/fa";
 
 import { FormContent, Input, Button } from './styles';
 
@@ -39,7 +40,7 @@ export default class Form extends React.Component {
             <div>
                 <FormContent onSubmit={this.handleSubmit}>
                     <input value={this.state.newListItem} onChange={this.handleTextChange} placeholder="Ex.: Levar o cachorro para passear" required/>
-                    <button type='submit'>ADICIONAR</button>
+                    <button type='submit' title='Adicionar'><FaPlus /></button>
                 </FormContent>
 
                 { this.state.listItems.map((item, index) => {

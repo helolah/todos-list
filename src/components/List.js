@@ -1,25 +1,27 @@
 import React from 'react';
+import { FaCheck } from "react-icons/fa";
+import { FaPen } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
 
-import { ListItens, Item } from './styles';
+import { ListItens } from './styles';
 
 export default class List extends React.Component {
     constructor(props) {
         super(props);
-
-        this.handleScratch = this.handleScratch.bind();
     }
 
-    handleScratch(e) {
-        console.log('teste');
-    }
-
+    handleRemoveItem(e) {
+        e.currentTarget.parentNode.remove();
+    };
+    
     render() {
         return (
-            <div>
-                <ListItens>
-                    <Item>{this.props.text}</Item>
-                </ListItens>
-            </div>
+            <ListItens>
+                <div className='listItens'>
+                    <input value={this.props.text} readOnly />
+                    <button className='removeButton' onClick={this.handleRemoveItem}><FaTrash /></button>
+                </div>
+            </ListItens>
         );
     }
 }
