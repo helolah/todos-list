@@ -1,7 +1,7 @@
 import React from 'react';
 import List from './List'
 
-import { Input, Button } from './styles';
+import { FormContent, Input, Button } from './styles';
 
 export default class Form extends React.Component {
     constructor(props) {
@@ -37,10 +37,10 @@ export default class Form extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <Input value={this.state.newListItem} onChange={this.handleTextChange} placeholder="Ex.: Levar o cachorro para passear" required/>
-                    <Button type='submit'>ADICIONAR</Button>
-                </form>
+                <FormContent onSubmit={this.handleSubmit}>
+                    <input value={this.state.newListItem} onChange={this.handleTextChange} placeholder="Ex.: Levar o cachorro para passear" required/>
+                    <button type='submit'>ADICIONAR</button>
+                </FormContent>
 
                 { this.state.listItems.map((item, index) => {
                     return <List text={item.text} key={index} />
