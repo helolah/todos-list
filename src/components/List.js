@@ -80,7 +80,7 @@ export default class List extends React.Component {
             <ListItens>
                 <div className='listItens'>
                     <div className='actionInputs'>
-                        <input type='checkbox' className='doneButton' onChange={this.handleIsChecked} defaultChecked={this.state.checked} disabled={this.state.disabledCheckbox} ref={(checkbox) => { this.disabledCheckbox = checkbox; }}></input>
+                        <input type='checkbox' title="Marcar como 'Feito'" className='doneButton' onChange={this.handleIsChecked} defaultChecked={this.state.checked} disabled={this.state.disabledCheckbox} ref={(checkbox) => { this.disabledCheckbox = checkbox; }}></input>
                         <input type='text' className='listItem' value={this.state.inputValue} readOnly={this.state.readOnly} onChange={this.handleTextChange} ref={(input) => { this.itemInput = input; }} />
                     </div>
                     <div className='actionButtons'>
