@@ -102,8 +102,8 @@ export const FormContent = styled.form`
         justify-content: center;
 
         &:hover {
-            opacity: 0.9;
-            transition: 0.5s;
+            opacity: 0.8;
+            transition: 0.5s ease-in-out;
         }
 
         @media(max-width: 465px) {
@@ -126,32 +126,118 @@ export const ListItens = styled.div`
         border-radius: 0.2rem;
         margin: 2rem;
 
-        input {
-            max-width: 600px;
-            width: 100%;
-            color: #2395FF;
-            font-family: 'Poppins',sans-serif;
-            font-size: 1rem;
-            padding: 1rem 1.5rem;
-            border: none;
-            background-color: rgb(255,255,255);
-            cursor: default;
-        
-            &:focus {
-                box-shadow: 0 0 0 0;
-                border: 0 none;
-                outline: 0;
+        .actionInputs {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 1.5rem;
+
+            .listItem {
+                max-width: 600px;
+                width: 100%;
+                color: #2395FF;
+                font-family: 'Poppins',sans-serif;
+                font-size: 1rem;
+                padding: 1rem 1.5rem;
+                border: none;
+                background-color: rgb(255,255,255);
+                cursor: default;
+                transition: 0.5s ease-in-out;
+            
+                &:focus {
+                    box-shadow: 0 0 0 0;
+                    border: 0 none;
+                    outline: 0;
+                    cursor: text;
+                }
+            }
+
+            .doneItem {
+                color: #ddd;
+                text-decoration: line-through;
+                transition: 0.5s ease-in-out;
+            }
+
+            .doneButton {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                border: 1px solid #ddd;
+                vertical-align: middle;
+                outline: none;
+                cursor: pointer;
+                
+                &:checked {
+                    background: #28A745;
+                    border: 1px solid #28A745;
+                }
+            }
+
+            .disabledCheckbox {
+                cursor: default;
             }
         }
 
-        .removeButton {
-            float:right;
-            background: red;
-            border:none;
-            padding: 1.25rem;
-            border-top-right-radius: 0.2rem;
-            border-bottom-right-radius: 0.2rem;
-            cursor: pointer;
+        .actionButtons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .removeButton {
+                float:right;
+                background: red;
+                border:none;
+                padding: 1.25rem;
+                border-top-right-radius: 0.2rem;
+                border-bottom-right-radius: 0.2rem;
+                cursor: pointer;
+                opacity: 1;
+                
+                &:hover {
+                    opacity: 0.8;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+    
+            .editButton {
+                float:right;
+                background: #2395FF;
+                border:none;
+                padding: 1.25rem;
+                cursor: pointer;
+                opacity: 1;
+                transition: 0.5s ease-in-out;
+
+                &:hover {
+                    opacity: 0.8;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+
+            .editedButton {
+                float:right;
+                background: #28A745;
+                border:none;
+                padding: 1.25rem;
+                cursor: pointer;
+                opacity: 1;
+
+                &:hover {
+                    opacity: 0.8;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+
+            .disabledButton {
+                background: #DDD;
+                cursor: default;
+                transition: 0.5s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
+
     }
 `;
