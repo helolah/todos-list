@@ -55,6 +55,8 @@ export default class List extends React.Component {
             disabledCheckbox: !this.state.disabledCheckbox,
         });
 
+        this.disabledCheckbox.classList.remove('disabledCheckbox');
+
         if ( this.state.inputValue.length <= 0 ) {
             e.currentTarget.parentNode.parentNode.remove();
         }
